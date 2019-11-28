@@ -88,6 +88,7 @@ namespace MediaBrowser.Model.LiveTv
         public bool? IsSeries { get; set; }
 
         public string[] SortBy { get; set; }
+        public string GroupTitle { get; set; }
 
         /// <summary>
         /// The sort order to return results with

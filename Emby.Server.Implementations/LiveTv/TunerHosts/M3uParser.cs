@@ -151,6 +151,13 @@ namespace Emby.Server.Implementations.LiveTv.TunerHosts
                 channel.Id = string.Join("_", channelIdValues);
             }
 
+            attributes.TryGetValue("group-title", out string groupTitle);
+
+            if (!string.IsNullOrWhiteSpace(groupTitle))
+            {
+                channel.GroupTitle = groupTitle;
+            }
+
             return channel;
         }
 

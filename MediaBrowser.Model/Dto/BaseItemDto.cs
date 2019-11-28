@@ -144,6 +144,11 @@ namespace MediaBrowser.Model.Dto
         /// <value>The channel identifier.</value>
         public Guid ChannelId { get; set; }
         public string ChannelName { get; set; }
+        /// <summary>
+        /// Gets or sets the Group Title
+        /// </summary>
+        /// <value>The title of the group the channel is in.</value>
+        public string GroupTitle { get; set; }
 
         /// <summary>
         /// Gets or sets the overview.

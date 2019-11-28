@@ -38,6 +38,12 @@ namespace MediaBrowser.Controller.LiveTv
         public string TunerHostId { get; set; }
 
         /// <summary>
+        /// Gets or sets the group title of the channel.
+        /// </summary>
+        /// <value>The channels group title.</value>
+        public string GroupTitle { get; set; }
+
+        /// <summary>
         /// Gets or sets the type of the channel.
         /// </summary>
         /// <value>The type of the channel.</value>

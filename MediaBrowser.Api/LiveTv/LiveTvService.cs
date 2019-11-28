@@ -98,6 +98,9 @@ namespace MediaBrowser.Api.LiveTv
         [ApiMember(Name = "EnableImageTypes", Description = "Optional. The image types to include in the output.", IsRequired = false, DataType = "string", ParameterType = "query", Verb = "GET")]
         public string EnableImageTypes { get; set; }
 
+        [ApiMember(Name = "GroupTitle", Description = "Optional. The group the channel is in.", IsRequired = false, DataType = "string", ParameterType = "query", Verb = "GET")]
+        public string GroupTitle { get; set; }
+        
         /// <summary>
         /// Fields to return within the items, in addition to basic information
         /// </summary>
@@ -959,7 +962,8 @@ namespace MediaBrowser.Api.LiveTv
                 IsSports = request.IsSports,
                 SortBy = request.GetOrderBy(),
                 SortOrder = request.SortOrder ?? SortOrder.Ascending,
-                AddCurrentProgram = request.AddCurrentProgram
+                AddCurrentProgram = request.AddCurrentProgram,
+                GroupTitle = request.GroupTitle
 
             }, options, CancellationToken.None);
 
